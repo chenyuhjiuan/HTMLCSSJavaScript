@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/register.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="register_library.js"></script>
+    <script src="register.js"></script>
+</head>
+	
+<body>
+	<header>
+		<hgroup>
+                         
+			<h1>SheepFacts</h1>
+                        
+                        <h2>A place to learn about sheep</h2>
+		</hgroup>
+    </header>
+   <nav id="nav_bar">
+       	<ul id="navmenu">
+    		<li><a href="index.html">Home</a></li>
+                <li ><a href="aboutsheep.html">About Sheep</a><span class="darrow">&#9660;</span> 
+                    <ul class="sub1">
+                       <li class="uli"><a href="sheepAndgoat.html">Sheep and Goat</a></li>
+                       <li class="uli"><a href="followLeader.html">Follow the Leader</a></li>
+                       <li class="uli"><a href="sheepsense.html">Sheep Sense</a></li>
+                       <li class="uli"><a href="sheepeat.html">Sheep Eat</a></li>
+                    </ul>
+                </li>
+    		<li><a href="kindsOfsheep.html">Kinds of Sheep</a><span class="darrow">&#9660;</span>                      
+                   <ul class="sub1">
+                       <li class="uli"><a href="countingsheep.html">Counting Sheep</a></li>
+                       <li class="uli"><a href="bbbSheep.html">Baa Baa Black Sheep</a></li>
+                       <li class="uli"><a href="nakedsheep.html">Naked Sheep</a></li>
+                       <li class="uli"><a href="woolsheep.html">Wool Sheep</a></li>
+                    </ul>
+                </li>
+
+    		<li><a href="sheepProducts.html">Sheep Products</a><span class="darrow">&#9660;</span>  
+                    <ul class="sub1">
+                       <li class="uli"><a href="eatinglamb.html">Eating Lamb</a></li>
+                       <li class="uli"><a href="wool.html">Wool</a></li>
+                       <li class="uli"><a href="dairySheep.html">Got Milk</a></li>
+                    </ul>
+                </li>
+    		<li><a class="current" href="contact.html">Contact Us</a><span class="darrow">&#9660;</span>                      
+                    <ul class="sub1">
+                       <li class="uli"><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+
+    	</ul>
+   </nav>
+<br><br>
+     
+	<article>
+		<p><span class="breadcrumbs-title"> </span>
+				<a href="contact.html" class="register">Contact US </a> 
+			   <span class="separator">&raquo;</span> 
+			   <span id="register1">Register</span>
+			</p>
+	  	<br>
+		<h1>Become a Member</h1>
+    	<form action="register_account.html" method="get"
+              name="registration_form" id="registration_form">
+    		<fieldset>
+	        	<legend>Registration Information</legend>
+	        	<label for="email">E-Mail:</label>
+                <input type="email" name="email" id="email" autofocus required>
+                    <span id="email_error">Must be a valid  email address.</span><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+                    <span id="password_error">Must be at least 6 characters.</span><br>
+                <label for="verify">Verify Password:</label>
+                <input type="password" name="verify" id="verify" required>
+                    <span id="verify_error">&nbsp;</span><br>
+    		</fieldset>
+    		<fieldset>
+        		<legend>Member Information</legend>
+        		<label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required>
+                    <span id="first_name_error">&nbsp;</span><br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" required>
+                    <span id="last_name_error">&nbsp;</span><br>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required>
+                    <span id="address_error">&nbsp;</span><br>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" required>
+                    <span id="city_error">&nbsp;</span><br>
+                <label for="state">State:</label>
+                <input type="text" name="state" id="state" maxlength="2" required>
+                    <span id="state_error">Use 2 character abbreviation.</span><br>
+                <label for="zip">ZIP Code:</label>
+                <input type="text" name="zip" id="zip" required>
+                    <span id="zip_error">Use 5 or 9 digit ZIP code.</span><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" required>
+                    <span id="phone_error">Use 999-999-9999 format.</span><br>
+        	</fieldset>
+        	<fieldset>
+				<legend>Membership Information</legend>
+				<label for="membership_type">Membership Type:</label>
+				<select name="membership_type" id="membership_type">
+				    <option value="j">Junior</option>
+				    <option value="r">Regular</option>            
+				    <option value="c">Charter</option>
+				</select><br>
+				<label for="starting_date">Starting Date:</label>
+				<input type="date" name="date" id="date"  required>
+				    <span id="date_error">&nbsp;Use mm/dd/yyyy format</span><br>
+				<label for="tickets">Tickets for Guests:</label>
+				<input type="number" name="tickets" id="tickets" value="2" min="1" max="4" 
+				       placeholder="from 1 to 4"><br>
+			</fieldset>
+			<fieldset id="buttons">
+				<legend>Submit Your Membership</legend>
+				<label>&nbsp;</label>
+				<input type="button" id="register" value="Register" />
+                <input type="button" id="reset_form" value="Reset Fields" /><br />
+			</fieldset>
+		</form>
+	</article>
+	<footer>
+		<p>&copy; Copyright 2013 Emily Marinovich.</p>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Counting Sheep</title>
+	<link rel="stylesheet" href="styles/countingsheep.css">
+	<link rel="stylesheet" href="styles/print.css" media="print">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- include the jQuery UI stylesheet -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery.ui.all.css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<!-- include the jQuery and jQuery UI JavaScript files -->
+	<script
+    	src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+	</script>
+	<script 
+    	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+	</script>
+	<script>
+	$(function() {
+    	var $slider = $('.panel-inner');
+    	var liW = 151;
+    	var liFW = parseInt(liW * ($slider.find('li').length + 1));
+    	$slider.css('width', liFW + 'px');
+    	$('.button').click(function() {
+        	var leftX = (this.id == 'right') ?
+            	parseInt($slider.css('left').toString().replace('-', '')) : 
+            	parseInt($slider.css('left'));
+        	var leftY = (this.id == 'right') ? ((leftX + 404) == liFW) ? 0: -
+            	(leftX + liW) : (leftX < 0) ? -
+            	(parseInt(leftX.toString().replace('-', '')) - liW) : 0;
+            	rotate(leftY);
+    	});
+    	var rotate = function(leftY) {$slider.animate({left: leftY},500);}
+	});
+	</script>
+</head>
+	
+<body>
+	<header>
+		<hgroup>
+                         
+			<h1>SheepFacts</h1>
+                        
+                        <h2>A place to learn about sheep</h2>
+		</hgroup>
+    </header>
+    <nav id="nav_bar">
+       	<ul id="navmenu">
+    		<li><a href="index.html">Home</a></li>
+                <li ><a href="aboutsheep.html">About Sheep</a><span class="darrow">&#9660;</span> 
+                    <ul class="sub1">
+                       <li class="uli"><a href="sheepAndgoat.html">Sheep and Goat</a></li>
+                       <li class="uli"><a href="followLeader.html">Follow the Leader</a></li>
+                       <li class="uli"><a href="sheepsense.html">Sheep Sense</a></li>
+                       <li class="uli"><a href="sheepeat.html">Sheep Eat</a></li>
+                    </ul>
+                </li>
+    		<li><a class="current" href="kindsOfsheep.html">Kinds of Sheep</a><span class="darrow">&#9660;</span>                      
+                   <ul class="sub1">
+                       <li class="uli"><a href="countingsheep.html">Counting Sheep</a></li>
+                       <li class="uli"><a href="bbbSheep.html">Baa Baa Black Sheep</a></li>
+                       <li class="uli"><a href="nakedsheep.html">Naked Sheep</a></li>
+                       <li class="uli"><a href="woolsheep.html">Wool Sheep</a></li>
+                    </ul>
+                </li>
+
+    		<li><a href="sheepProducts.html">Sheep Products</a><span class="darrow">&#9660;</span>  
+                    <ul class="sub1">
+                       <li class="uli"><a href="eatinglamb.html">Eating Lamb</a></li>
+                       <li class="uli"><a href="wool.html">Wool</a></li>
+                       <li class="uli"><a href="dairySheep.html">Got Milk</a></li>
+                    </ul>
+                </li>
+    		<li><a href="contact.html">Contact Us</a><span class="darrow">&#9660;</span>                      
+                    <ul class="sub1">
+                       <li class="uli"><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+
+    	</ul>
+   </nav>
+<br><br>
+     	
+	<section>
+		<p><span class="breadcrumbs-title"> </span>
+				<a href="kindsOfsheep.html" class="kindsofsheep">Kinds of Sheep </a> 
+			   <span class='separator'>&raquo;</span> 
+			   <span id="countingsheep">Counting Sheep</span>
+		</p><br>
+	
+		<h1> Counting sheep</h1><br>
+		<div id="carousel">
+    			<div class="button" id="left"><img src="images/left.jpg"></div>
+    			<div class="panel"> 
+        		<ul class="panel-inner">
+            		<li><img src="images/AfrinoRam.jpg" alt="Afrino Ram" ></li>
+            		<li><img src="images/bluefacedLeicester.jpg" alt="Blue Faced Leicester"    ></li>
+            		<li><img src="images/coarseWoolewes.jpg" alt="Coarse Wool Ewes"  ></li>
+            		<li><img src="images/dairyewes.jpg" alt="Dairy Ewes"  ></li>
+            		<li><img src="images/fineWoolEwes.jpg" alt="Fine Wool Ewes"   ></li>
+            		<li><img src="images/fineWoolrams.jpg" alt="Fine Wool Rams"   ></li>
+            		<li><img src="images/icelandicSheep.jpg" alt="Icelandic Sheep"   ></li>
+            		<li><img src="images/katahdinEwe.jpg" alt="Katahdin Ewe"   ></li>
+            		<li><img src="images/katahdinFlock.jpg" alt="Katahdin Flock"   ></li> 
+			<li><img src="images/autumnsheep.jpg" alt="Afrino Ram" ></li>
+            		<li><img src="images/bankSheep.jpg" alt="Blue Faced Leicester"    ></li>
+            		<li><img src="images/barbadoblackbellyrams.jpg" alt="Coarse Wool Ewes"  ></li>
+            		<li><img src="images/blackheadeddorper.jpg" alt="Dairy Ewes"  ></li>
+            		<li><img src="images/bluemountSheep.jpg" alt="Fine Wool Ewes"   ></li>
+            		<li><img src="images/bwlambs.jpg" alt="Fine Wool Rams"   ></li>
+            		<li><img src="images/carvingWholelamb.jpg" alt="Icelandic Sheep"   ></li>
+            		<li><img src="images/dartmoor.jpg" alt="Katahdin Ewe"   ></li>
+            		<li><img src="images/eatinghaylage.jpg" alt="Katahdin Flock"   ></li>
+			<li><img src="images/followleader.jpg" alt="Afrino Ram" ></li>
+            		<li><img src="images/gansualpine.jpg" alt="Blue Faced Leicester"    ></li>
+            		<li><img src="images/GermanMerino.jpg" alt="Coarse Wool Ewes"  ></li>
+            		<li><img src="images/goatsBrowsers.jpg" alt="Dairy Ewes"  ></li>
+            		<li><img src="images/greyheath.jpg" alt="Fine Wool Ewes"   ></li>
+            		<li><img src="images/gromark.jpg" alt="Fine Wool Rams"   ></li>
+            		<li><img src="images/gulfcoastram.jpg" alt="Icelandic Sheep"   ></li>
+            		<li><img src="images/Hampshire sheep.jpg" alt="Katahdin Ewe"   ></li>
+            		<li><img src="images/handMilking.jpg" alt="Katahdin Flock"   ></li>           		            		            		            		            		            		        		</ul>
+    			</div>
+    			<div class="button" id="right"><img src="images/right.jpg"></div>
+		</div> <br><br><br>
+              	<b>Sheep breeds</b><br>
+                There are more breeds of sheep than breeds of any other livestock 
+                species. Worldwide, there are more than one thousand distinct 
+                sheep breeds. There are more than 40 breeds in the United States. 
+                Sheep come in all different sizes, shapes, and colors. <br>
+                <br>
+                There are several different ways to classify sheep breeds: according to their primary purpose 
+                (meat, milk, or wool), the type of fibers they grow (fine, medium, 
+                long or carpet wool; or hair), the color of their faces (black, 
+                white, red, or moddled), and/or by specific physical or production 
+                characteristics.<br><br>
+                <br>
+                <b>Fine wool sheep<br>
+                  </b>Fine wool sheep produce wool fibers with a very small fiber 
+                  diameter, usually 20 microns or less. Fine wool sheep account for more than 50 percent of the world's sheep population. 
+                  Found throughout Australia,, South Africa, South America, and 
+                  the Western United States, most sheep of this type belong to the 
+                  Merino breed or its derivatives. <br>
+                  <br>
+                  The Rambouillet, related to the Merino, is the most common breed 
+                  of sheep in the U.S., especially the western states where the 
+                  majority of sheep in the U.S. can still be found. Fine wool sheep 
+                  are best adapted to arid and semi-arid regions. They are known 
+                  for their longevity and strong flocking instinct.<br>
+                  <br>
+                  <br><b>Long wool sheep<br>
+                  </b>Long wool sheep produce long-stapled wool with a large fiber 
+                    diameter, usually greater than 30 microns. Long wool sheep are 
+                    best adapted to cool, high rainfall areas with abundant forage. 
+                    They are commonly raised in England, Scotland, New Zealand, and 
+                    the Falkland Islands. In the U.S., the fleeces from the long wool 
+                    breeds are popular among handspinners.<br>
+                  <br><br>
+                  <b>Medium wool meat sheep<br>
+                  </b>Meat or &quot;mutton-type&quot; sheep produce wool, mostly 
+                    medium (or long), but are raised more for their meat qualities. 
+                    Medium wool sheep account for about 15 percent of the world's 
+                    sheep population. The most popular meat breeds in the U.S. are 
+                    Suffolk, Dorset, and Hampshire.<br>
+                  <br><br>
+                  <b>Carpet wool sheep</b><br>
+                  The coarest, lowest grade wool (usually over 38 microns) is used 
+                  in the manufacture of carpets. Carpet wool breeds are usually 
+                  double-coated, with a coarse long outer coat for protection against 
+                  the elements. They are generally adapted to extreme environments. 
+                  Carpet wool breeds found in the U.S. include Icelandic, Karakul, 
+                  Navajo Churro, and Scottish Blackface.<br>
+                  <br><br>
+                  <b>Hair Sheep<br>
+                  </b>Some breeds lack wool and are covered with hair instead, like 
+                    their wild ancestors. Some hair sheep have pure hair coats, whereas 
+                    others have coats that contain a mixture of hair and wool fibers 
+                    that shed naturally. Hair sheep are found mostly in Africa and 
+                    the Caribbean, but are also raised in temperate climates, such 
+                    as the U.S. and Canada. <br>
+                  <br>
+                  Hair sheep account for about 10 percent of the world's sheep population 
+                  and are the fastest growing segment of the American sheep industry. 
+                  Interest in hair sheep genetics is also developing in Australia, 
+                  Europe, and the United Kingdom.<br><br>
+                  <br>
+                  <b>Fat-tailed sheep<br>
+                  </b>Fat tailed or fat-rumped sheep are so-named because they can 
+                    store large amounts of fat in the tail and region of the rump. 
+                    Fat-tailed sheep are found mostly in the extremely arid regions 
+                    of Africa, the Middle East, and Asia. They often produce wool, 
+                    but are raised primarily for meat or milk production. Fat-tailed 
+                    sheep comprise 25 percent of the world's sheep population. The only fat-tailed sheep raised in the U.S. is the Karakul.<br>
+                  <br>
+                  <b><br>
+                  </b><b>Short or rat-tailed breeds<br>
+                  </b>Short or rat-tailed breeds originate primarily from Scandinavia 
+                    and Northern Europe. Their tails are thin and free of wool and 
+                    do not need docked. These breeds tend to be very prolific. Examples 
+                    of these breeds include Finn Sheep, Romanov, East Friesian, Shetland, 
+                    Icelandic, and Soay.<br>
+                  <br>
+                  <br><b>Primitive breeds<br>
+                  </b>Primitive breeds have developed with minimal human selection 
+                    pressure. They typically possess lots of genetic variation between 
+                    members, but share characteristics indicative of a breed. A primitive 
+                    breed will typically retain survival characteristics that favor 
+                    production with minimal human inputs. <br>
+                  <br>
+                  Consistency among the products produced by the breed is somewhat 
+                  lacking, but they are an important source of genetic variation 
+                  that may not exist anywhere else. Many primitive breeds live in 
+                  isolated mountain regions or on islands. Like some species of 
+                  wildlife, many are endangered. Fortunately conservation efforts 
+                  are underway to preserve these important genetic resources.<br>
+                  <br>
+                  <br>
+                  <strong>&lt;== <a href="kindsOfsheep.html">KINDS OF SHEEP</a></strong><br>
+                  <br>
+                </ul>
+            <!-- #EndEditable --> 
+        
+
+
+                  <br>
+                  <br>
+                  
+
+	</section>
+
+	<footer>
+		<p>&copy; Copyright 2013 Emily Marinovich.</p>
+	</footer>
+	
+</body>
+</html>

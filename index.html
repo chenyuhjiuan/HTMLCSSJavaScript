@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sheep Facts</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   	<script language="JavaScript1.1">
+ 	<!--
+		var image1=new Image()
+ 		image1.src="images/autumnsheep.jpg"
+ 		var image2=new Image()
+ 		image2.src="images/sheepline.jpg"
+ 		var image3=new Image()
+ 		image3.src="images/mountainSheep.jpg"
+		var image4=new Image()
+ 		image4.src="images/bankSheep.jpg"
+ 		var image5=new Image()
+ 		image5.src="images/bluemountSheep.jpg"
+ 		var image6=new Image()
+ 		image6.src="images/holySheep.jpg"
+		var image7=new Image()
+ 		image7.src="images/orangeScene.jpg"		
+ 	//-->
+ 	</script>	
+        <script type="text/javascript" src="jQuery/jquery-1.9.0.js"></script>
+        <script type="text/javascript">
+            $('li').click(function(){
+            $(this).find('#navmenu>li').stop().fadeToggle(400);
+
+
+          });        
+        </script>
+
+
+</head>
+	
+<body>
+	<header>
+		<hgroup>
+                         
+			<h1>SheepFacts</h1>
+                        
+                        <h2>A place to learn about sheep</h2>
+		</hgroup>
+    </header>
+    <nav id="nav_bar">
+       	<ul id="navmenu">
+    		<li><a class="current" href="index.html">Home</a></li>
+                <li ><a href="aboutsheep.html">About Sheep</a><span class="darrow">&#9660;</span> 
+                    <ul class="sub1">
+                       <li class="uli"><a href="sheepAndgoat.html">Sheep and Goat</a></li>
+                       <li class="uli"><a href="followLeader.html">Follow the Leader</a></li>
+                       <li class="uli"><a href="sheepsense.html">Sheep Sense</a></li>
+                       <li class="uli"><a href="sheepeat.html">Sheep Eat</a></li>
+                    </ul>
+                </li>
+    		<li><a href="kindsOfsheep.html">Kinds of Sheep</a><span class="darrow">&#9660;</span>                      
+                   <ul class="sub1">
+                       <li class="uli"><a href="countingsheep.html">Counting Sheep</a></li>
+                       <li class="uli"><a href="bbbSheep.html">Baa Baa Black Sheep</a></li>
+                       <li class="uli"><a href="nakedsheep.html">Naked Sheep</a></li>
+                       <li class="uli"><a href="woolsheep.html">Wool Sheep</a></li>
+                    </ul>
+                </li>
+
+    		<li><a href="sheepProducts.html">Sheep Products</a><span class="darrow">&#9660;</span>  
+                    <ul class="sub1">
+                       <li class="uli"><a href="eatinglamb.html">Eating Lamb</a></li>
+                       <li class="uli"><a href="wool.html">Wool</a></li>
+                       <li class="uli"><a href="dairySheep.html">Got Milk</a></li>
+                    </ul>
+                </li>
+    		<li><a href="contact.html">Contact Us</a><span class="darrow">&#9660;</span>                      
+                    <ul class="sub1">
+                       <li class="uli"><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+
+    	</ul>
+   </nav>
+<br><br>
+    <aside>
+		<h1>To learn more:</h1>
+		<nav>
+		  <ul>
+		  	<li><a href="aboutsheep.html">Basic information about sheep</a></li>
+			<li><a href="sheepAndgoat.html">Sheep vs. Goats</a></li>
+			<li><a href="sheepeat.html">What sheep eat</a></li>
+			<li><a href="countingsheep.html">Counting sheep</a></li>
+			<li><a href="bbbSheep.html">Baa Baa Black Sheep </a></li>
+			<li><a href="wool.html">About Wool</a></li>
+			<li><a href="dairySheep.html">Got milk?</a></li>
+			 			 
+		  </ul>
+		</nav>
+	</aside>
+	<section> 
+		<h1>SheepFacts: A place to learn the facts of sheep</h1>
+		<img src="images/autumnsheep.jpg" name="slide" alt="Autumn Sheep" width=400 height=300/>
+		 
+ 	<script>
+ 	<!--
+	//variable that will increment through the images
+ 		var step=1
+ 		function slideit(){
+ 		//if browser does not support the image object, exit.
+		 if (!document.images)
+			 return
+			 document.images.slide.src=eval("image"+step+".src")
+			 if (step<7)
+			 step++
+			 else
+			 step=1
+			 //call function "slideit()" every 3.0 seconds
+			 setTimeout("slideit()",3000)
+ 			}
+			 slideit();
+			  	
+ 		//-->
+	 </script>
+		<p><strong><i>Welcome to SheepFacts.</i></strong> The purpose of SheepFacts is to teach students, teachers, beginning shepherds, 
+                   and the general public about sheep and their products. The site uses simple language and pictures to 
+		   illustrate the various topics. To begin learning about sheep, click on a link in the menu bar.
+</p>
+		<p><strong><i>About the author.</i></strong> The author of SheepFacts is Emily Marinovich, Sheep & Goat Specialist at 
+		   Jiu Chang Hong Enterprises. Emily has been a Sales Manager of international business in sheep products since 2010. 
+		   She has B.S. degree in Nursing and M.S. degree in Human Genetics from Koahsiung Medical University and Howard University, respectively.
+</p>
+		 
+	</section>
+	<footer>
+		<p>&copy; Copyright 2013 Emily Marinovich.</p>
+	</footer>
+	
+</body>
+</html>	

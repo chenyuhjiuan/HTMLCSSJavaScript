@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Account Registration</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/registerAccount.css">
+
+
+	<style type="text/css">
+    	@import "register.css";
+	    dt {
+	        font-weight: bold;
+	    }
+	</style>
+	<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var url_parts = window.location.toString().split("?");
+    if ( url_parts.length != 2 ) return;
+    
+    var fields = url_parts[1].split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+<header>
+		<hgroup>
+                         
+			<h1>SheepFacts</h1>
+                        
+                        <h2>A place to learn about sheep</h2>
+		</hgroup>
+    </header>
+    <nav id="nav_bar">
+       	<ul id="navmenu">
+    		<li><a href="index.html">Home</a></li>
+                <li ><a class="current" href="aboutsheep.html">About Sheep</a><span class="darrow">&#9660;</span> 
+                    <ul class="sub1">
+                       <li class="uli"><a href="sheepAndgoat.html">Sheep and Goat</a></li>
+                       <li class="uli"><a href="followLeader.html">Follow the Leader</a></li>
+                       <li class="uli"><a href="sheepsense.html">Sheep Sense</a></li>
+                       <li class="uli"><a href="sheepeat.html">Sheep Eat</a></li>
+                    </ul>
+                </li>
+    		<li><a href="kindsOfsheep.html">Kinds of Sheep</a><span class="darrow">&#9660;</span>                      
+                   <ul class="sub1">
+                       <li class="uli"><a href="countingsheep.html">Counting Sheep</a></li>
+                       <li class="uli"><a href="bbbSheep.html">Baa Baa Black Sheep</a></li>
+                       <li class="uli"><a href="nakedsheep.html">Naked Sheep</a></li>
+                       <li class="uli"><a href="woolsheep.html">Wool Sheep</a></li>
+                    </ul>
+                </li>
+
+    		<li><a href="sheepProducts.html">Sheep Products</a><span class="darrow">&#9660;</span>  
+                    <ul class="sub1">
+                       <li class="uli"><a href="eatinglamb.html">Eating Lamb</a></li>
+                       <li class="uli"><a href="wool.html">Wool</a></li>
+                       <li class="uli"><a href="dairySheep.html">Got Milk</a></li>
+                    </ul>
+                </li>
+    		<li><a href="contact.html">Contact Us</a><span class="darrow">&#9660;</span>                      
+                    <ul class="sub1">
+                       <li class="uli"><a href="register.html">Register</a></li>
+                    </ul>
+                </li>
+
+    	</ul>
+   </nav>
+<br><br>
+ <div>
+	<br>
+    <h2 >Thank you for your registration!</h2><br>
+    <p>You account registration has been submitted with the following
+    information:</p>
+    <script type="text/javascript">display_data();</script>
+ 
+</div>
+
+<footer>
+		<p>&copy; Copyright 2013 Emily Marinovich.</p>
+	</footer>
+</body>
+</html>
